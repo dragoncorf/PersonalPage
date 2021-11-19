@@ -1,4 +1,3 @@
-import Router from "next/router";
 import Head from "./Head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";

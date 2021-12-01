@@ -15,15 +15,21 @@ const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
           objectFit="fill"
         />
       </figure>
-      {showMobileView ? (
-        <MenuIcon />
-      ) : (
-        <ul className="flex items-center space-x-4">
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Education</li>
-        </ul>
-      )}
+
+      <MenuIcon />
+
+      <ul className="extended-menu flex items-center space-x-4">
+        <li>Skills</li>
+        <li>Projects</li>
+        <li>Education</li>
+      </ul>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .extended-menu {
+            display: none;
+          }
+        }
+      `}</style>
     </div>
   );
 };

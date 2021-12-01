@@ -8,6 +8,15 @@ const MenuIcon = () => {
       <div></div>
       <style jsx>
         {`
+          .menu {
+            display: none;
+          }
+
+          @media (max-width: 768px) {
+            .menu {
+              display: block;
+            }
+          }
           .menu div {
             width: 30px;
             height: 4px;

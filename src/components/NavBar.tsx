@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import MenuIcon from "./MenuIcon";
+import MenuIcon from "@components/MenuIcon";
 
 const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
   const [showMobileView, setShowMobileView] = useState(true);

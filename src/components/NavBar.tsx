@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import MenuIcon from "@components/MenuIcon";
+import Link from "next/link";
 
 const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
   const [showMobileView, setShowMobileView] = useState(true);
@@ -19,9 +20,21 @@ const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
       <MenuIcon />
 
       <ul className="extended-menu flex items-center space-x-4">
-        <li>Skills</li>
-        <li>Projects</li>
-        <li>Education</li>
+        <Link href="/#skills">
+          <a>
+            <li>Skills</li>
+          </a>
+        </Link>
+        <Link href="/#projects">
+          <a>
+            <li>Projects</li>
+          </a>
+        </Link>
+        <Link href="/#education">
+          <a>
+            <li>Education</li>
+          </a>
+        </Link>
       </ul>
       <style jsx>{`
         @media (max-width: 768px) {

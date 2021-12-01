@@ -29,5 +29,6 @@ body {
   font-size: 1.6rem;
 }
 
-p {
+main section {
+  height: 100vh;
 }

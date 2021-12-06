@@ -6,7 +6,7 @@ import Link from "next/link";
 const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
   const [showMobileView, setShowMobileView] = useState(true);
   return (
-    <div className="flex fixed w-full px-6 pt-2 justify-between items-center">
+    <div className="flex fixed w-full px-6 pt-2 justify-between items-center bg-white">
       <Link href="/#home">
         <a>
           <figure className="flex">

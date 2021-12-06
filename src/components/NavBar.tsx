@@ -7,15 +7,19 @@ const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
   const [showMobileView, setShowMobileView] = useState(true);
   return (
     <div className="flex fixed w-full px-6 pt-2 justify-between items-center">
-      <figure className="flex">
-        <Image
-          src="/icons/Diego.svg"
-          alt="Image of Diego"
-          width={75}
-          height={75}
-          objectFit="fill"
-        />
-      </figure>
+      <Link href="/#home">
+        <a>
+          <figure className="flex">
+            <Image
+              src="/icons/Diego.svg"
+              alt="Image of Diego"
+              width={75}
+              height={75}
+              objectFit="fill"
+            />
+          </figure>
+        </a>
+      </Link>
 
       <MenuIcon />
 

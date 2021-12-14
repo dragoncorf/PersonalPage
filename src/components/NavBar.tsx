@@ -6,8 +6,8 @@ import Link from "next/link";
 const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
   const [showMobileView, setShowMobileView] = useState(true);
   return (
-    <div className="flex fixed w-full px-6 pt-2 justify-between items-center bg-white">
-      <Link href="/#home">
+    <div className="flex fixed z-50 w-full px-6 pt-2 justify-between items-center bg-white">
+      <Link href="/#">
         <a>
           <figure className="flex">
             <Image
@@ -21,29 +21,41 @@ const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
         </a>
       </Link>
 
-      <MenuIcon />
+      <div className="menu">
+        <div className="menu-icon flex justify-center items-center">
+          <MenuIcon />
+        </div>
+        <ul className="extended-menu flex items-center space-x-4">
+          <Link href="/#skills">
+            <a>
+              <li>Skills</li>
+            </a>
+          </Link>
+          <Link href="/#projects">
+            <a>
+              <li>Projects</li>
+            </a>
+          </Link>
+          <Link href="/#education">
+            <a>
+              <li>Education</li>
+            </a>
+          </Link>
+        </ul>
+      </div>
 
-      <ul className="extended-menu flex items-center space-x-4">
-        <Link href="/#skills">
-          <a>
-            <li>Skills</li>
-          </a>
-        </Link>
-        <Link href="/#projects">
-          <a>
-            <li>Projects</li>
-          </a>
-        </Link>
-        <Link href="/#education">
-          <a>
-            <li>Education</li>
-          </a>
-        </Link>
-      </ul>
       <style jsx>{`
         @media (max-width: 768px) {
           .extended-menu {
             display: none;
+          }
+          .menu-icon {
+            width: 50px;
+          }
+          .menu-icon:hover {
+            border-radius: 50%;
+            background-color: #65c9ff;
+            height: 50px;
           }
         }
       `}</style>

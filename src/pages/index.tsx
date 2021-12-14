@@ -3,22 +3,40 @@ import Layout from "@components/Layout";
 import Image from "next/image";
 const Home: NextPage = () => {
   return (
-    <Layout pageTitle="Inicio" metaDescription="Hola" currentRoute="a">
-      <main className="flex flex-col items-center justify-center ">
+    <Layout
+      pageTitle="Home"
+      metaDescription="Home for Diego's page"
+      currentRoute="home"
+    >
+      <main className="flex flex-col items-center justify-center">
+        {/* <figure className="absolute w-full">
+          <Image
+            src="/icons/wave1.svg"
+            alt="style-wave"
+            width={100}
+            height={100}
+            objectFit="cover"
+          />
+        </figure> */}
         <section
           id="home"
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center space-y-4 z-10"
         >
           <h1 className="text-center">
             HELLO! <br />
             My name is Diego Cort&eacute;s Fuentes
           </h1>
-          <Image
-            src="/images/DiegoHome.jpg"
-            alt="picture of Diego, creator of the web site"
-            width={100}
-            height={100}
-          />
+          <figure className="flex">
+            <Image
+              src="/images/DiegoHome.jpg"
+              alt="picture of Diego, creator of the web site"
+              width={150}
+              height={150}
+            />
+          </figure>
+        </section>
+        <section id="about-me">
+          <h1 className="">About me</h1>
           <p className="max-w-4xl text-justify">
             I am a Frontend web developer with one and a half years of
             experience making web applications. With experience teaching to
@@ -28,6 +46,7 @@ const Home: NextPage = () => {
             Web developer and UX specialist.
           </p>
         </section>
+
         <section id="skills">
           <h1 className="">Skills</h1>
           <p>Aaaaaaaaaa</p>
@@ -44,7 +63,8 @@ const Home: NextPage = () => {
       <footer></footer>
       <style jsx>{`
         main section {
-          background-color: ;
+          margin-top: 100px;
+          padding: 1.5rem /* 24px */;
         }
       `}</style>
     </Layout>

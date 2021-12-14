@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuIcon = () => {
+const MenuIcon = ({}) => {
   return (
     <div className="menu">
       <div></div>

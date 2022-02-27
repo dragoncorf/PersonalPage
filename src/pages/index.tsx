@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             />
           </figure>
         </section>
-        <section id="about-me">
+        <section id="about">
           <h1 className="">About me</h1>
           <p className="max-w-4xl text-justify">
             I am a Frontend web developer with one and a half years of

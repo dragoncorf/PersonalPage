@@ -8,7 +8,11 @@ const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
   return (
     <div className="flex fixed z-50 w-full px-6 pt-2 justify-between items-center bg-white">
       <Link href="/#">
-        <a>
+        <a
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        >
           <figure className="flex">
             <Image
               src="/icons/Diego.svg"
@@ -26,6 +30,11 @@ const NavBar: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
           <MenuIcon />
         </div>
         <ul className="extended-menu flex items-center space-x-4">
+          <Link href="/#about">
+            <a>
+              <li>About</li>
+            </a>
+          </Link>
           <Link href="/#skills">
             <a>
               <li>Skills</li>
